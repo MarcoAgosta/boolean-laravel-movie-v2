@@ -22,7 +22,10 @@ Route::get('/', function () {
 
 
 
-Route::middleware(['auth', 'verified'])
-    ->group(function () {
-        Route::resource("movies", MovieController::class);
-    });
+// Route::middleware(['auth', 'verified'])
+//     ->group(function () {
+// //         Route::resource("movies", MovieController::class);
+//     });
+Route::resource("movies", MovieController::class);
+
+require __DIR__ . '/auth.php';
