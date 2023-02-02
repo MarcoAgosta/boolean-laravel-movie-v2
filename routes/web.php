@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MovieController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -13,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -21,13 +23,6 @@ Route::get('/', function () {
 
 
 Route::middleware(['auth', 'verified'])
-    ->prefix("admin") // porzione di uri che verrà inserita prima di ogni rotta
-    ->name("admin.") // porzione di testo inserita prima del name di ogni rotta
     ->group(function () {
-        Route::get('/', [MovieController::class, "home"])->name('dashboard');
-        Route::get('/users', [MovieController::class, "home"])->name('users');
-        Route::get('/pippo', [MovieController::class, "home"])->name('pippo');
-
-        Route::resource("movies", PostController::class);
+        Route::resource("movies", MovieController::class);
     });
-require __DIR__ . '/auth.php';
