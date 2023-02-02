@@ -41,20 +41,19 @@ CREATE TABLE `movies` (
 -- Dumping data for table `movies`
 --
 
-INSERT INTO `movies` (`id`, `title`, `anno_uscita`, `genere`, `disponibile`, `created_at`, `updated_at`) VALUES
-(1, 'Una notte da leoni ', '2014', 'Commedia ', 1, '2023-01-24 22:00:00', '2023-01-24 22:00:00'),
-(2, 'Avatar', '2009', 'Fantascientifico ', 0, '2023-01-24 22:00:00', '2023-01-24 22:00:00'),
-(3, 'Una notte da leoni ', '2014', 'Commedia ', 1, '2023-01-24 22:00:00', '2023-01-24 22:00:00'),
-(4, 'Avatar', '2009', 'Fantascientifico ', 0, '2023-01-24 22:00:00', '2023-01-24 22:00:00'),
-(5, 'Cars', '2009', 'Animazione', 1, '2023-01-24 22:00:00', '2023-01-24 22:00:00'),
-(6, 'Jurassic Park', '2009', 'Fantascienza ', 0, '2023-01-24 22:00:00', '2023-01-24 22:00:00'),
-(7, 'Cars', '2009', 'Animazione', 1, '2023-01-24 22:00:00', '2023-01-24 22:00:00'),
-(8, 'Jurassic Park', '2009', 'Fantascienza ', 0, '2023-01-24 22:00:00', '2023-01-24 22:00:00'),
-(9, 'Fast and  Furious ', '2014', 'Azione', 1, '2023-01-24 22:00:00', '2023-01-24 22:00:00'),
-(10, 'Inception', '2009', 'Psicologico ', 0, '2023-01-24 22:00:00', '2023-01-24 22:00:00'),
-(11, 'Fast and  Furious ', '2014', 'Azione', 1, '2023-01-24 22:00:00', '2023-01-24 22:00:00'),
-(12, 'Inception', '2009', 'Psicologico ', 0, '2023-01-24 22:00:00', '2023-01-24 22:00:00');
-
+INSERT INTO `movies` (`id`, `title`,`descrizione`, `anno_uscita`, `genere`, `disponibile`, `created_at`, `updated_at`) VALUES
+(1, 'Una notte da leoni ',"lorem ipsum", '2014', 'Commedia ', 1, '2023-01-24 22:00:00', '2023-01-24 22:00:00'),
+(2, 'Avatar', "lorem ipsum",'2009', 'Fantascientifico ', 0, '2023-01-24 22:00:00', '2023-01-24 22:00:00'),
+(3, 'Una notte da leoni ', "lorem ipsum",'2014', 'Commedia ', 1, '2023-01-24 22:00:00', '2023-01-24 22:00:00'),
+(4, 'Avatar',"lorem ipsum", '2009', 'Fantascientifico ', 0, '2023-01-24 22:00:00', '2023-01-24 22:00:00'),
+(5, 'Cars',"lorem ipsum", '2009', 'Animazione', 1, '2023-01-24 22:00:00', '2023-01-24 22:00:00'),
+(6, 'Jurassic Park',"lorem ipsum", '2009', 'Fantascienza ', 0, '2023-01-24 22:00:00', '2023-01-24 22:00:00'),
+(7, 'Cars',"lorem ipsum", '2009', 'Animazione', 1, '2023-01-24 22:00:00', '2023-01-24 22:00:00'),
+(8, 'Jurassic Park',"lorem ipsum", '2009', 'Fantascienza ', 0, '2023-01-24 22:00:00', '2023-01-24 22:00:00'),
+(9, 'Fast and  Furious ',"lorem ipsum", '2014', 'Azione', 1, '2023-01-24 22:00:00', '2023-01-24 22:00:00'),
+(10, 'Inception',"lorem ipsum", '2009', 'Psicologico ', 0, '2023-01-24 22:00:00', '2023-01-24 22:00:00'),
+(11, 'Fast and  Furious ',"lorem ipsum", '2014', 'Azione', 1, '2023-01-24 22:00:00', '2023-01-24 22:00:00'),
+(12, 'Inception', "lorem ipsum",'2009', 'Psicologico ', 0, '2023-01-24 22:00:00', '2023-01-24 22:00:00');`
 --
 -- Indexes for dumped tables
 --
