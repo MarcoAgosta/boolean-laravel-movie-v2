@@ -45,6 +45,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{url('/') }}">{{ __('Home') }}</a>
                         </li>
+                        <li class="nav-item px-3">
+                            <a class="nav-link" href="{{route("movies.index")}}">I tuoi Film</a>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
