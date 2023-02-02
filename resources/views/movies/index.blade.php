@@ -2,7 +2,7 @@
 @section('content')
     <div class="d-flex align-items-center justify-content-between  my-3">
         <h1>I Tuoi Post</h1>
-        <a href="{{ route('movies.create') }}" class="mx-3">Add new</a>
+        <a href="{{ route('movies.create') }}" class="mx-3">+ new</a>
     </div>
 
     <table class="table">
@@ -23,11 +23,8 @@
 
                     <td> {{ $movie->anno_uscita }} </td>
 
-                    <td>
-                        <a href="{{ $movie->github_link }}">
-                            {{ $movie->github_link }}</a>
-                    </td>
-
+                    <td> {{ $movie->genere }} </td>
+                    <td> {{ $movie->disponibile === 1 ? 'Si' : ' No' }}</td>
                     <td>
                         <a href="{{ route('movies.show', $movie->id) }}" class="btn btn-info w-100">See details</a>
                         @include('movies.partials.delete-form-btn')
