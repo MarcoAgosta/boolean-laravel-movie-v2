@@ -5,7 +5,7 @@
     <div class="container py-5">
        
         <h1 class="display-5 fw-bold anim ">
-            Welcome to <br>Bool movie!
+            Welcome to <br>Bool Movies!
         </h1>
 
         
