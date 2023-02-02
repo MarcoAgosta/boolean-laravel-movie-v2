@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Movie;
 use App\Http\Requests\StoreMovieRequest;
 use App\Http\Requests\UpdateMovieRequest;
+use App\Models\Movie;
 
 class MovieController extends Controller
 {
@@ -15,7 +15,11 @@ class MovieController extends Controller
      */
     public function index()
     {
-        //
+        $movies = Movie::all();
+
+        return view('movies.index', [
+            'movies' => $movies
+        ]);
     }
 
     /**
@@ -25,7 +29,7 @@ class MovieController extends Controller
      */
     public function create()
     {
-        //
+        return view('movies.create');
     }
 
     /**
@@ -36,7 +40,14 @@ class MovieController extends Controller
      */
     public function store(StoreMovieRequest $request)
     {
-        //
+        $data = $request->validated();
+
+        $movie = new Movie();
+
+        $movie->fill($data);
+        $movie->save();
+
+        return redirect()->route('movies.show', $movie->id);
     }
 
     /**
@@ -47,7 +58,7 @@ class MovieController extends Controller
      */
     public function show(Movie $movie)
     {
-        //
+        return view('movie.show', compact('movie'));
     }
 
     /**
@@ -58,7 +69,7 @@ class MovieController extends Controller
      */
     public function edit(Movie $movie)
     {
-        //
+        return view('movies.edit', compact('movie'));
     }
 
     /**
@@ -70,7 +81,11 @@ class MovieController extends Controller
      */
     public function update(UpdateMovieRequest $request, Movie $movie)
     {
-        //
+        $data = $request->validated();
+
+        $movie->update($data);
+
+        return redirect()->route('movies.show', $movie->id);
     }
 
     /**
@@ -81,6 +96,8 @@ class MovieController extends Controller
      */
     public function destroy(Movie $movie)
     {
-        //
+        $movie->delete();
+
+        return redirect()->route('movies.index');
     }
 }
