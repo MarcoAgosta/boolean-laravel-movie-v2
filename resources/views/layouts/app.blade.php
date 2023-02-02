@@ -48,6 +48,9 @@
                         <li class="nav-item px-3">
                             <a class="nav-link" href="{{route("movies.index")}}">I tuoi Film</a>
                         </li>
+                        <li class="nav-item px-3">
+                            <a class="nav-link" href="{{route("movies.create")}}">Aggiungi Film</a>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

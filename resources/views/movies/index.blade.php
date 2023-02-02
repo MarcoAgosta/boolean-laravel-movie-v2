@@ -27,8 +27,8 @@
                     <td class="text-center pt-4"> {{ $movie->genere }} </td>
                     <td class="text-center pt-4"> {{ $movie->disponibile === 1 ? 'Si' : ' No' }}</td>
                     <td class="text-center pt-4">
-                     <a href="{{ route('movies.show', $movie->id) }}" class="btn btn-warning"><i class="fas fa-eye"></i>Edit</a>
-                     <a href="{{ route('movies.edit', $movie->id) }}" class="btn btn-info"><i class="fas fa-eye"></i>Show</a>
+                     <a href="{{ route('movies.edit', $movie->id) }}" class="btn btn-warning"><i class="fas fa-eye"></i>Edit</a>
+                     <a href="{{ route('movies.show', $movie->id) }}" class="btn btn-info"><i class="fas fa-eye"></i>Show</a>
                     </td>
                 </tr>
             @endforeach

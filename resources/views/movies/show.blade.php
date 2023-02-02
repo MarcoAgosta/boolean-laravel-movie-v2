@@ -21,5 +21,5 @@
       </div>
    </div>
    <a href="{{ route('movies.index') }}" class="mx-3">lista dei film</a>
-   <a href="{{ route('movies.edit', $project->id) }}" class="mx-3">cambia il film</a>
+   <a href="{{ route('movies.edit', $movie->id) }}" class="mx-3">cambia il film</a>
 @endsection
